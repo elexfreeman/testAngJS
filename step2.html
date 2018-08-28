@@ -1,0 +1,30 @@
+<div my-step></div>
+
+<div>
+    <div class="form-group">
+        <label class="form-label">Телефон</label>
+        <input ng-model="client.phone" class="form-input" type="text">
+    </div>
+
+
+    <div class="form-group">
+        <label class="form-label">Email</label>
+        <input ng-model="client.email" class="form-input" type="text">
+    </div>
+
+
+
+    <div class="text-right p-t-1">
+        <button  ng-disabled="!ValidateForm()" class="btn btn-success w-7rem" ng-click="next()">Отправить</button>
+    </div>
+
+    <div>
+        <ul class="list">
+            <li><b>Имя: </b>{{client.name}}</li>
+            <li><b>Возраст: </b>{{client.age}}</li>
+            <li><b>Пол: </b><span ng-show="client.genre==1">мужской</span><span ng-show="client.genre==2">женский</span></li>
+            <li><b>Телефон: </b>{{client.phone}}</li>
+            <li><b>Email: </b>{{client.email}}</li>
+        </ul>
+    </div>
+</div>

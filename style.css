@@ -1,0 +1,95 @@
+
+.p-t-1 {
+    padding-top: 1rem;
+}
+
+.w-100p {
+    width: 100%;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.w-7rem {
+    width: 7rem;
+}
+
+.m-b-1 {
+    margin-bottom: 1rem;
+}
+
+.progressbar , .progressbar-title{
+    counter-reset: step;
+    margin:0;
+}
+
+.progressbar li, .progressbar-title li {
+    list-style: none;
+    display: inline-block;
+    width: 49%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #fff;
+}
+
+.progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ddd;
+    top: 14px;
+    left: -50%;
+    z-index: -1;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.progressbar-title li.active.complite {
+    color: #949494;
+}
+
+.progressbar li.active:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background-color: #32b643;
+    color: #fff;
+}
+
+.progressbar li.active.complite:before{
+    content: "\2713 ";
+}
+
+.progressbar li.active:before {
+    border-color: #32b643;
+}
+
+.progressbar li.active:after {
+    background-color: #32b643;
+}

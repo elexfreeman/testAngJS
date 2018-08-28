@@ -1,0 +1,30 @@
+<div my-step></div>
+
+<div>
+    <div class="form-group">
+        <label class="form-label">Имя</label>
+        <input ng-model="client.name" class="form-input" type="text">
+    </div>
+
+
+    <div class="form-group">
+        <label class="form-label">Возраст</label>
+        <input ng-model="client.age" class="form-input" type="text">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Пол</label>
+        <label class="form-radio">
+            <input ng-model="client.genre" value="1" type="radio" name="gender" checked>
+            <i class="form-icon"></i> Мужской
+        </label>
+        <label class="form-radio">
+            <input ng-model="client.genre" value="2" type="radio" name="gender">
+            <i class="form-icon"></i> Женский
+        </label>
+    </div>
+
+    <div class="text-right">
+        <button  ng-disabled="!ValidateForm()" class="btn btn-success w-7rem" ng-click="next()">Далее</button>
+    </div>
+</div>
